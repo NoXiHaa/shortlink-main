@@ -2,7 +2,7 @@
 
 A modern URL shortening service built with Node.js and Express.
 
-![URL Shortener](https://i.ibb.co/svf72rq/URL-Shortener-488cba09-76df-47e3-a400-4cf3d0a0f257-1.png)
+![URL Shortener](https://i.ibb.co/ZKvJqzL/favicon-2.png)
 
 ## Features
 
@@ -55,7 +55,7 @@ POST /shorten
 **Response:**
 ```json
 {
-  "shortUrl": "https://srl.ink/abc123",
+  "shortUrl": "http://localhost:3000/abc123",
   "qrCode": "data:image/png;base64,..."
 }
 ```
@@ -84,7 +84,7 @@ GET /abc123?password=123 # Access protected URL
 ## Environment Variables
 
 PORT=1986
-BASE_URL=https://srl.ink
+BASE_URL=http://localhost:3000/
 
 ## Contributing
 
@@ -100,8 +100,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Kha Dang - [@khadnhdev](https://www.linkedin.com/in/khadnh/)
+Kha Dang - [@NoXiHaa](https://www.facebook.com/NoXiHaa/)
 
 
 ---
-Made with ❤️ by [Kha Dang]
+Made with ❤️ by Ngo Xuan Hoang
