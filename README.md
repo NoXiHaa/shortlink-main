@@ -1,58 +1,113 @@
-# URL Shortener
 
-A modern URL shortening service built with Node.js and Express.
+<div align="center">
+  <img src="https://i.ibb.co/ZKvJqzL/favicon-2.png" alt="URL Shortener Logo" width="120" height="120">
+  
+  # 🔗 URL Shortener
+  
+  <p align="center">
+    Dịch vụ rút gọn URL hiện đại được xây dựng với Node.js và Express
+    <br />
+    <a href="https://github.com/NoXiHaa/shortlink-main"><strong>Khám phá tài liệu »</strong></a>
+    <br />
+    <br />
+    <a href="https://demo-url.com">Xem Demo</a>
+    ·
+    <a href="https://github.com/NoXiHaa/shortlink-main/issues">Báo cáo Bug</a>
+    ·
+    <a href="https://github.com/NoXiHaa/shortlink-main/issues">Yêu cầu Tính năng</a>
+  </p>
 
-![URL Shortener](https://i.ibb.co/ZKvJqzL/favicon-2.png)
+  <div align="center">
+    <img src="https://img.shields.io/github/license/NoXiHaa/shortlink-main?style=for-the-badge" alt="License">
+    <img src="https://img.shields.io/github/stars/NoXiHaa/shortlink-main?style=for-the-badge" alt="Stars">
+    <img src="https://img.shields.io/github/issues/NoXiHaa/shortlink-main?style=for-the-badge" alt="Issues">
+  </div>
+</div>
 
-## Features
+<br />
 
-- 🔗 Quick URL shortening
-- 🎯 Custom aliases
-- 🔒 Password protection
-- ⏰ Expiration dates
-- 📱 QR code generation
-- 👀 URL preview
+## ✨ Tính Năng Nổi Bật
 
-## Tech Stack
+🚀 **Hiệu Suất Cao**
+- Rút gọn URL nhanh chóng
+- Tạo QR code tức thì
+- Giao diện người dùng mượt mà
 
-- **Backend**: Node.js, Express
-- **Database**: SQLite3
-- **Frontend**: EJS, Bootstrap 5
-- **Icons**: Font Awesome
-- **Notifications**: SweetAlert2
+🔒 **Bảo Mật Tối Ưu**
+- Bảo vệ link bằng mật khẩu
+- Mã hóa dữ liệu
+- Chống spam và lạm dụng
 
-## Getting Started
+⚙️ **Tùy Chỉnh Linh Hoạt**
+- Tùy chỉnh URL ngắn
+- Đặt thời gian hết hạn
+- Theo dõi thống kê truy cập
 
-### Prerequisites
+## 🛠️ Công Nghệ Sử Dụng
 
-- Node.js (v14 or higher)
-- npm or yarn
+<div align="center">
 
-### Installation
+| Công nghệ | Phiên bản |
+|-----------|-----------|
+| Node.js | v14+ |
+| Express | v4.17+ |
+| SQLite3 | v5.0+ |
+| Bootstrap | v5.1+ |
+| Font Awesome | v6.0+ |
+| SweetAlert2 | v11+ |
 
-1. Clone the repository
-2. Install dependencies using npm install
-3. Copy .env.example to .env and update the values
-4. Start the server using npm start
-5. For development, use npm run dev
+</div>
 
-## API Usage
+## 🚀 Bắt Đầu Nhanh
 
-### Create Short URL
+### Yêu Cầu Hệ Thống
+```bash
+Node.js (v14 trở lên)
+npm hoặc yarn
+```
 
+### Cài Đặt
+
+1️⃣ Clone repository
+```bash
+git clone https://github.com/NoXiHaa/shortlink-main.git
+```
+
+2️⃣ Cài đặt dependencies
+```bash
+npm install
+```
+
+3️⃣ Cấu hình môi trường
+```bash
+cp .env.example .env
+# Chỉnh sửa file .env theo nhu cầu
+```
+
+4️⃣ Khởi chạy ứng dụng
+```bash
+npm start
+```
+
+## 📚 API Documentation
+
+### Tạo URL Rút Gọn
+
+```http
 POST /shorten
+```
 
-**Request Body:**
+#### Request Body
 ```json
 {
   "url": "https://example.com/long-url",
-  "customSlug": "custom-name",      // Optional
-  "password": "secretpass",         // Optional
-  "expiresIn": "7:days"            // Optional
+  "customSlug": "custom-name",      // Tùy chọn
+  "password": "secretpass",         // Tùy chọn
+  "expiresIn": "7:days"            // Tùy chọn
 }
 ```
 
-**Response:**
+#### Response
 ```json
 {
   "shortUrl": "http://localhost:3000/abc123",
@@ -60,48 +115,48 @@ POST /shorten
 }
 ```
 
-### Access Short URL
+### Truy Cập URL Rút Gọn
 
-**Base URL:**
-```
+```http
 GET /{shortId}
 ```
 
-**Query Parameters:**
+| Tham số | Kiểu | Mô tả |
+|---------|------|--------|
+| `preview` | `boolean` | Xem trang preview |
+| `password` | `string` | Mật khẩu truy cập |
 
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `preview` | `boolean` | Show preview page instead of direct redirect |
-| `password` | `string` | Required for password-protected URLs |
+## 🌐 Biến Môi Trường
 
-**Examples:**
-```
-GET /abc123              # Direct redirect
-GET /abc123?preview=true # Show preview page
-GET /abc123?password=123 # Access protected URL
-```
-
-## Environment Variables
-
-PORT=1986
+```env
+PORT=3000
 BASE_URL=http://localhost:3000/
+```
 
-## Contributing
+## 🤝 Đóng Góp
 
-1. Fork the project
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
+Mọi đóng góp đều được chào đón! Hãy làm theo các bước:
 
-## License
+1. Fork dự án
+2. Tạo branch tính năng (`git checkout -b feature/AmazingFeature`)
+3. Commit thay đổi (`git commit -m 'Add some AmazingFeature'`)
+4. Push lên branch (`git push origin feature/AmazingFeature`)
+5. Mở Pull Request
 
-Distributed under the MIT License. See `LICENSE` for more information.
+## 📝 License
 
-## Contact
+Phân phối theo giấy phép MIT. Xem `LICENSE` để biết thêm thông tin.
 
-Kha Dang - [@NoXiHaa](https://www.facebook.com/NoXiHaa/)
+## 📧 Liên Hệ
 
+Ngo Xuan Hoang - [@NoXiHaa](https://www.facebook.com/NoXiHaa/)
+
+Project Link: [https://github.com/NoXiHaa/shortlink-main](https://github.com/NoXiHaa/shortlink-main)
 
 ---
-Made with ❤️ by Ngo Xuan Hoang
+
+<div align="center">
+  <img src="https://i.ibb.co/ZKvJqzL/favicon-2.png" alt="Footer Logo" width="40" height="40">
+  <br>
+  <sub>Made with ❤️ by <a href="https://github.com/NoXiHaa">Ngo Xuan Hoang</a></sub>
+</div>
